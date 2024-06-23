@@ -9,11 +9,11 @@ public class LibraryApp {
         Scanner input = new Scanner(System.in);
 
         while (true) {
-            System.out.println("1. Add a new book.");
-            System.out.println("2. View all books.");
-            System.out.println("3. Borrow a book.");
-            System.out.println("4. Return a book.");
-            System.out.println("5. Exit.");
+            System.out.println("1. Add a new book");
+            System.out.println("2. View all books");
+            System.out.println("3. Borrow a book");
+            System.out.println("4. Return a book");
+            System.out.println("5. Exit");
             System.out.print("Choose an option: ");
             int option = input.nextInt();
 

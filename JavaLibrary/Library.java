@@ -4,22 +4,32 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Library {
-    private ArrayList<Book> book;
-    private Scanner input;
+    private final ArrayList<Book> books;
+    private final Scanner input;
 
     public Library() {
-        book = new ArrayList<>();
+        books = new ArrayList<>();
         input = new Scanner(System.in);
     }
 
     public void addBook() {
-        System.out.print("Enter book title: ");
+        System.out.print("Enter books title: ");
         String title = input.nextLine();
 
-        System.out.print("Enter book author: ");
+        System.out.print("Enter books author: ");
         String author = input.nextLine();
 
-        book.add(new Book(title, author));
+        books.add(new Book(title, author));
         System.out.println("Book Added!");
+    }
+
+    public void viewBooks() {
+        if (books.isEmpty()) {
+            System.out.println("No books left");
+        } else {
+            for (Book book : books) {
+                System.out.println(book);
+            }
+        }
     }
 }

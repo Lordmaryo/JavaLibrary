@@ -28,6 +28,11 @@ public class Book {
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
-        this.isBorrowed = isBorrowed;
+        this.isBorrowed = false;
+    }
+
+    @Override
+    public String toString() {
+        return title + " by " + author + (isBorrowed ? " (Borrowed)" : " (Available)");
     }
 }
