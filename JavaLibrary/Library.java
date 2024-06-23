@@ -28,8 +28,40 @@ public class Library {
             System.out.println("No books left");
         } else {
             for (Book book : books) {
+                System.out.println("======================");
                 System.out.println(book);
+                System.out.println("======================");
             }
         }
+    }
+
+    public void borrowBook() {
+        System.out.print("Enter title of books you would like to borrow: ");
+        String title = input.nextLine();
+
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title) && !book.isBorrowed()) {
+                book.borrowBook();
+                System.out.println("Book borrowed successfully");
+                return;
+            }
+        }
+
+        System.out.println("Book selected Unavailable");
+    }
+
+    public void returnBook() {
+        System.out.print("Enter title of book you would like to return: ");
+        String title = input.nextLine();
+
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title) && book.isBorrowed()) {
+                book.returnBook();
+                System.out.println("Book returned successfully");
+                return;
+            }
+        }
+
+        System.out.println("Book selected Unavailable");
     }
 }

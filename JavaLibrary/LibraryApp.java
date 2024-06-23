@@ -22,16 +22,16 @@ public class LibraryApp {
                     library.addBook();
                     break;
                 case 2:
-                    System.out.println("2");
+                    library.viewBooks();
                     break;
                 case 3:
-                    System.out.println("3");
+                    library.borrowBook();
                     break;
                 case 4:
-                    System.out.println("4");
+                    library.returnBook();
                     break;
                 case 5:
-                    System.out.println("5");
+                    System.out.println("Exiting...");
                     return;
                 default:
                     System.out.println("Invalid option");
